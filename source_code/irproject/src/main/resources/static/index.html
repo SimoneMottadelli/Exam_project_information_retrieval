@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Query engine</title>
+</head>
+<body>
+<h1>Search Engine for Twitter posts</h1>
+<br>
+<form action="/results">
+Select the field on which you want to search:<br>
+<select id="field" name="field">
+  <option value="full_text">Text</option>
+  <option value="created_at">Pubblication datetime</option>
+  <option value="screen_name">Author</option>
+  <option value="hashtags">Hashtags</option>
+  <option value="citations">Tags</option>
+  <option value="custom">Custom query</option>
+</select>
+<br><br><br>
+Type your query here:<br>
+  <input type="text" id="query" name="query" style="width:80%;" required>
+  <br><br>
+  Flag this checkbox if you want to use synonyms:
+ <input type="checkbox" id="synonym" name="synonym"><br><br>
+  Type the weight for the user profile:
+  <input type="text" id="weight" name="weight" style="width:40px;" value="0.42"><br><br>
+ <input type="submit" value="Search">
+</form>
+</body>
+</html>
